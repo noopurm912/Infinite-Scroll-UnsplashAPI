@@ -1,5 +1,6 @@
 const imageContainer = document.getElementById('image-container');
 const loader = document.getElementById('loader');
+const queryCat = 'cat';
 
 let ready = false;
 let imagesLoaded = 0;
@@ -13,11 +14,11 @@ let isInitialCount = true;
 // Unsplash API
 let photoCount = 5;
 const unSplashKey = '16KHsdXmZQVwFjHpgAFQHkvEpF3aLbLgGWurMYJFJ5M';
-let unSplashApi = `https://api.unsplash.com/photos/?client_id=${unSplashKey}&count=${photoCount}`;
+let unSplashApi = `https://api.unsplash.com/photos/random?client_id=${unSplashKey}&count=${photoCount}&query=${queryCat}`;
 
 //Update the new count for second load
 function updateAPINewCount(picount){
-    unSplashApi = `https://api.unsplash.com/photos/?client_id=${unSplashKey}&count=${picount}`;
+    unSplashApi = `https://api.unsplash.com/photos/random?client_id=${unSplashKey}&count=${picount}&query=${queryCat}`;
 }
 
 
